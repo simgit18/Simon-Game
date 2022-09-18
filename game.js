@@ -85,10 +85,17 @@ jQuery(document).ready(function($){
       
           } else {
             
-            $("#level-title").text("GameOver!!! \n To start Again press A")
+            $("#level-title").text("GameOver!!! \n To start Again press any Key")
             startOver();
             audioPLayer("wrong");
-            console.log("wrong");
+
+      $("body").addClass("game-over");
+
+      setTimeout(function () {
+        $("body").removeClass("game-over");
+      }, 200);
+
+      startOver();
       
           }
       
